@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GrowBuddies — Your ROI Buddy in Business Growth</title>
+  <meta name="description" content="GrowBuddies helps businesses grow with ROI-focused Content, SEO, Web Development, and Offshore Resource Management." />
+  <meta name="theme-color" content="#27AE60" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --green:#27AE60;
+      --blue:#2F80ED;
+      --gray:#4F4F4F;
+      --light:#F7F8FA;
+      --dark:#0D1117;
+      --muted:#6B7280;
+      --radius:18px;
+      --shadow:0 10px 25px rgba(0,0,0,.08);
+      --shadow-lg:0 18px 40px rgba(0,0,0,.12);
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      color:#0f172a;
+      background:#ffffff;
+      line-height:1.6;
+    }
+    a{color:var(--blue);text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
+    /* Header */
+    header{
+      position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #eef2f7;
+      backdrop-filter:saturate(180%) blur(10px);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700;color:#0b1220}
+    .brand .logo{
+      width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--green),#32d27d);
+      display:grid;place-items:center;color:#fff;font-weight:800;box-shadow:var(--shadow);
+    }
+    .brand small{display:block;color:var(--muted);font-weight:500;letter-spacing:.2px}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav a{padding:8px 12px;border-radius:10px;color:#0b1220;font-weight:600}
+    nav a:hover{background:var(--light)}
+    .cta{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;padding:10px 16px;border-radius:12px;font-weight:700;box-shadow:var(--shadow);}
+    .cta:hover{filter:brightness(1.02);transform:translateY(-1px)}
+    /* Hero */
+    .hero{
+      position:relative;overflow:hidden;
+      padding:86px 0 64px;background:radial-gradient(1000px 400px at 20% -20%, #E7F7EE 0%, transparent 60%), radial-gradient(800px 300px at 120% 20%, #E7F0FF 0%, transparent 60%);
+    }
+    .hero-inner{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center}
+    h1{font-family:Montserrat,Inter,sans-serif;font-size:40px;line-height:1.1;margin:0 0 14px}
+    .lead{font-size:18px;color:#263042;margin:0 0 22px}
+    .badges{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 26px}
+    .badge{background:#fff;border:1px solid #e5e7eb;color:#374151;padding:8px 12px;border-radius:999px;font-weight:600;box-shadow:var(--shadow)}
+    .hero-card{
+      background:#fff;border:1px solid #eef2f7;border-radius:var(--radius);padding:18px;box-shadow:var(--shadow-lg)
+    }
+    .hero-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0 0}
+    .hero-item{display:flex;gap:10px;align-items:flex-start;background:var(--light);padding:10px 12px;border-radius:12px}
+    .hero-item svg{flex:0 0 18px;margin-top:2px}
+    /* Sections */
+    section{padding:64px 0;border-top:1px solid #f1f5f9}
+    h2{font-family:Montserrat,Inter,sans-serif;font-size:28px;margin:0 0 10px}
+    .sub{color:var(--muted);margin:0 0 24px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:#fff;border:1px solid #eef2f7;border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .card h3{margin:0 0 6px;font-size:20px}
+    .pill{display:inline-flex;align-items:center;gap:8px;font-size:13px;background:#f2f8ff;color:#0b4cc0;border-radius:999px;padding:6px 10px;font-weight:700}
+    .stack{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .stack .tag{background:#F2F4F7;border:1px solid #e5e7eb;border-radius:999px;padding:6px 10px;font-weight:600;color:#374151}
+    /* Portfolio */
+    .case{display:grid;grid-template-columns:1fr 1.2fr;gap:18px;align-items:center}
+    .mock{border-radius:16px;border:1px solid #e5e7eb;background:linear-gradient(180deg,#fff,#f6f7f9);padding:14px;box-shadow:var(--shadow)}
+    .stat{display:flex;gap:12px;align-items:center;margin-top:8px}
+    .stat b{font-size:18px}
+    /* Testimonials */
+    .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    blockquote{margin:0;padding:0}
+    .quote{background:#0d1117;color:#e6edf3;border-radius:18px;padding:18px;box-shadow:var(--shadow-lg);position:relative}
+    .quote footer{margin-top:10px;color:#9fb1c1;font-size:14px}
+    /* Contact */
+    form{display:grid;gap:12px}
+    input,textarea{
+      width:100%;padding:12px 14px;border:1px solid #d7dde6;border-radius:12px;font:inherit;background:#fff
+    }
+    textarea{min-height:120px;resize:vertical}
+    .btn{background:linear-gradient(90deg,var(--green),#42c880);border:0;color:#fff;padding:12px 16px;border-radius:12px;font-weight:800;cursor:pointer;box-shadow:var(--shadow)}
+    .btn:hover{filter:brightness(1.03);transform:translateY(-1px)}
+    /* Footer */
+    footer{padding:26px 0;color:#64748b}
+    footer .row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    footer .social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:10px;background:#eef2f7;margin-left:6px}
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-inner{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr 1fr}
+      .case{grid-template-columns:1fr}
+      .quotes{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 640px){
+      nav ul{display:none}
+      .grid-3,.quotes{grid-template-columns:1fr}
+      h1{font-size:32px}
+    }
+  </style>
+  <script>
+    // Simple mobile nav toggle (appear if needed in future)
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "GrowBuddies",
+    "url": "https://example.com",
+    "logo": "https://example.com/logo.png",
+    "slogan": "Your ROI Buddy in Business Growth",
+    "sameAs": [
+      "https://www.linkedin.com"
+    ],
+    "description": "ROI-focused content, SEO, web development, and offshore team management."
+  }
+  </script>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#top" aria-label="GrowBuddies Home">
+      <span class="logo" aria-hidden="true">GB</span>
+      <span>GrowBuddies<br><small>Your ROI Buddy in Business Growth</small></span>
+    </a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="cta" href="#contact">Work With Us</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <h1>GrowBuddies</h1>
+        <p class="lead">We’re your friendly, ROI-obsessed partners for Content, SEO, Web Development, and Offshore Team Management.</p>
+        <div class="badges">
+          <span class="badge">ROI-Focused</span>
+          <span class="badge">India Talent • Global Standards</span>
+          <span class="badge">Scalable Remote Teams</span>
+        </div>
+        <a class="cta" href="#contact" aria-label="Start a project">Start a Project →</a>
+
+        <div class="hero-list">
+          <div class="hero-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 7L9 18l-5-5" stroke="#27AE60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div><b>Measurable outcomes</b><br><small>Traffic, conversions, revenue — not vanity metrics.</small></div>
+          </div>
+          <div class="hero-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 20V4m0 0l4 4m-4-4L8 8" stroke="#2F80ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div><b>Scale with confidence</b><br><small>Offshore resources you can trust and manage easily.</small></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3 style="margin:0 0 8px">Quick Snapshot</h3>
+        <div class="stack">
+          <span class="tag">Content Strategy</span>
+          <span class="tag">On‑page SEO</span>
+          <span class="tag">Technical SEO</span>
+          <span class="tag">Link Building</span>
+          <span class="tag">React / WP</span>
+          <span class="tag">Shopify</span>
+          <span class="tag">Remote Teams</span>
+        </div>
+        <div class="stat">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M3 3v18h18" stroke="#94a3b8" stroke-width="2"/>
+            <path d="M7 15l3-3 2 2 5-5" stroke="#27AE60" stroke-width="2" fill="none"/>
+          </svg>
+          <div><b>Recent wins</b><br><small>180% organic lift • 40% e‑com sales uplift • 35% ops savings</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p class="sub">Growth should be simple, measurable, and scalable. We pair Indian expertise with global execution to deliver work that moves the needle.</p>
+      <div class="grid-3">
+        <div class="card">
+          <h3>What we do</h3>
+          <p>We design ROI-focused strategies across content, SEO, and web development — and back them with reliable offshore execution.</p>
+        </div>
+        <div class="card">
+          <h3>How we work</h3>
+          <p>Transparent roadmaps, weekly updates, and KPI dashboards. You’ll always know what’s shipped and what’s next.</p>
+        </div>
+        <div class="card">
+          <h3>Why it works</h3>
+          <p>Experienced remote teams, proven playbooks, and a partnership mindset. We treat your goals as our own.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2>Services</h2>
+      <p class="sub">Clear offerings. Strong outcomes.</p>
+      <div class="grid-3">
+        <div class="card">
+          <span class="pill">✍️ Content Writing</span>
+          <h3>Content & Strategy</h3>
+          <p>Blogs, landing pages, and brand copy built to inform, rank, and convert. We align topics to your funnel and revenue targets.</p>
+          <div class="stack">
+            <span class="tag">Content Calendars</span>
+            <span class="tag">Conversion Copy</span>
+            <span class="tag">Topic Clusters</span>
+          </div>
+        </div>
+        <div class="card">
+          <span class="pill">🔍 SEO</span>
+          <h3>Search Engine Optimization</h3>
+          <p>On‑page, technical, and off‑page SEO. From audits and schema to high‑quality link acquisition.</p>
+          <div class="stack">
+            <span class="tag">Site Audits</span>
+            <span class="tag">Keyword Research</span>
+            <span class="tag">Link Building</span>
+          </div>
+        </div>
+        <div class="card">
+          <span class="pill">💻 Web Dev</span>
+          <h3>Web Development</h3>
+          <p>Fast, modern sites in WordPress, Shopify, and custom stacks. Optimized for performance and UX.</p>
+          <div class="stack">
+            <span class="tag">WordPress</span>
+            <span class="tag">Shopify</span>
+            <span class="tag">React/Next</span>
+          </div>
+        </div>
+        <div class="card">
+          <span class="pill">🌍 Offshore Teams</span>
+          <h3>Resource Management</h3>
+          <p>Scale delivery with vetted Indian talent. We recruit, onboard, manage, and report — you focus on growth.</p>
+          <div class="stack">
+            <span class="tag">SOPs</span>
+            <span class="tag">Weekly Reporting</span>
+            <span class="tag">KPI Dashboards</span>
+          </div>
+        </div>
+        <div class="card">
+          <span class="pill">📊 Analytics</span>
+          <h3>Measurement & ROI</h3>
+          <p>Clear KPIs, monthly reviews, and experiments. We connect efforts to outcomes.</p>
+          <div class="stack">
+            <span class="tag">GA4</span>
+            <span class="tag">Search Console</span>
+            <span class="tag">Looker Studio</span>
+          </div>
+        </div>
+        <div class="card">
+          <span class="pill">🤝 Partnership</span>
+          <h3>Fractional Growth Team</h3>
+          <p>Need a long‑term partner? We’ll embed alongside your team and own agreed growth targets.</p>
+          <div class="stack">
+            <span class="tag">Roadmaps</span>
+            <span class="tag">Sprints</span>
+            <span class="tag">Quarterly OKRs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="container">
+      <h2>Portfolio & Case Studies</h2>
+      <p class="sub">A few recent snapshots. Swap with your real numbers & links.</p>
+
+      <div class="case">
+        <div class="mock">
+          <img alt="Analytics mockup" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='500'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0%' stop-color='%23ffffff'/><stop offset='100%' stop-color='%23f3f4f6'/></linearGradient></defs><rect width='100%' height='100%' fill='url(%23g)'/><rect x='30' y='40' width='740' height='420' rx='12' ry='12' fill='%23ffffff' stroke='%23e5e7eb'/><polyline points='60,420 200,360 320,290 420,320 560,220 700,260' fill='none' stroke='%2327AE60' stroke-width='4' /></svg>">
+        </div>
+        <div>
+          <h3>SEO Growth for SaaS</h3>
+          <p>Six‑month program blending content clusters, technical fixes, and high‑quality links.</p>
+          <div class="stat"><b>+180%</b> organic traffic</div>
+          <div class="stat"><b>+70%</b> non‑brand clicks</div>
+          <p><a href="#" aria-label="View case study">View case study →</a></p>
+        </div>
+      </div>
+
+      <div class="case" style="margin-top:18px">
+        <div class="mock">
+          <img alt="Ecommerce mockup" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='500'><rect width='100%' height='100%' fill='%23fff'/><rect x='30' y='40' width='740' height='420' rx='12' ry='12' fill='%23ffffff' stroke='%23e5e7eb'/><rect x='70' y='120' width='150' height='150' fill='%23E7F7EE' stroke='%23cfeedd' rx='12'/><rect x='250' y='120' width='150' height='150' fill='%23E7F0FF' stroke='%23d9e6ff' rx='12'/><rect x='430' y='120' width='150' height='150' fill='%23F2F4F7' stroke='%23e5e7eb' rx='12'/></svg>">
+        </div>
+        <div>
+          <h3>Web Dev for DTC</h3>
+          <p>Performance rebuild on Shopify with conversion‑focused UX.</p>
+          <div class="stat"><b>+40%</b> sales in 90 days</div>
+          <div class="stat"><b>1.9s</b> LCP on mobile</div>
+          <p><a href="#" aria-label="View case study 2">View case study →</a></p>
+        </div>
+      </div>
+
+      <div class="case" style="margin-top:18px">
+        <div class="mock">
+          <img alt="Team ops mockup" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='500'><rect width='100%' height='100%' fill='%23fff'/><rect x='30' y='40' width='740' height='420' rx='12' ry='12' fill='%23ffffff' stroke='%23e5e7eb'/><rect x='80' y='110' width='640' height='40' rx='8' fill='%23f2f8ff'/><rect x='80' y='170' width='420' height='40' rx='8' fill='%23E7F7EE'/><rect x='80' y='230' width='540' height='40' rx='8' fill='%23F2F4F7'/></svg>">
+        </div>
+        <div>
+          <h3>Offshore Team Setup</h3>
+          <p>Recruited and managed a blended team (writers, SEOs, devs) with SOPs & dashboards.</p>
+          <div class="stat"><b>−35%</b> operating costs</div>
+          <div class="stat"><b>+25%</b> delivery speed</div>
+          <p><a href="#" aria-label="View case study 3">View case study →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="container">
+      <h2>Testimonials</h2>
+      <p class="sub">What partners say about working with GrowBuddies.</p>
+      <div class="quotes">
+        <blockquote class="quote">
+          “They’re not vendors; they’re real growth partners. We saw measurable ROI within the first quarter.”
+          <footer>— Priya S., Head of Marketing</footer>
+        </blockquote>
+        <blockquote class="quote">
+          “Solid strategy, fantastic communication, and a calm, reliable offshore setup. Highly recommended.”
+          <footer>— Kevin M., Founder</footer>
+        </blockquote>
+        <blockquote class="quote">
+          “Our rebuild shipped on time, and the SEO results exceeded targets. Great team to collaborate with.”
+          <footer>— Daniel R., COO</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Let’s Grow Together</h2>
+      <p class="sub">Tell us about your goals. We’ll reply within 1–2 business days.</p>
+      <div class="grid-3" style="grid-template-columns:1.1fr .9fr;align-items:start">
+        <div class="card">
+          <form action="#" method="post">
+            <label>
+              <span>Name</span><br>
+              <input type="text" name="name" placeholder="Your full name" required>
+            </label>
+            <label>
+              <span>Email</span><br>
+              <input type="email" name="email" placeholder="you@example.com" required>
+            </label>
+            <label>
+              <span>Project Details</span><br>
+              <textarea name="message" placeholder="What do you want to achieve? Timelines, budget, scope…" required></textarea>
+            </label>
+            <button class="btn" type="submit">Send Inquiry</button>
+            <p style="font-size:12px;color:#6b7280;margin:8px 0 0">Tip: To enable the form, connect a service like Formspree and replace <code>action="#"</code> with your endpoint.</p>
+          </form>
+        </div>
+        <div class="card">
+          <h3>Contact</h3>
+          <p><b>Email:</b> <a href="mailto:hello@growbuddies.com">hello@growbuddies.com</a><br>
+             <b>LinkedIn:</b> <a href="#" rel="noopener">LinkedIn Profile</a><br>
+             <b>Location:</b> India • Serving clients globally
+          </p>
+          <h3 style="margin-top:10px">Why GrowBuddies?</h3>
+          <ul>
+            <li>ROI-first approach — clear KPIs and dashboards</li>
+            <li>Reliable offshore execution with SOPs</li>
+            <li>Senior oversight with weekly updates</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container row">
+    <div>© <span id="y"></span> GrowBuddies • Made with ❤️ in India</div>
+    <div class="social" aria-label="Social links">
+      <a href="#" title="LinkedIn" aria-label="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2c-1.2 0-2 .8-2 2v7h-4v-14h4v1.6C14.4 8.6 15.2 8 16 8zM2 9h4v14H2zM4 2a2 2 0 110 4 2 2 0 010-4z" fill="#0a66c2"/>
+        </svg>
+      </a>
+      <a href="mailto:hello@growbuddies.com" title="Email" aria-label="Email">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 6h16a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2z" stroke="#475569" stroke-width="1.6"/>
+          <path d="M22 8l-10 6L2 8" stroke="#27AE60" stroke-width="1.6"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</footer>
+</body>
+</html>
